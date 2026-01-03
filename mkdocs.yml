@@ -1,0 +1,135 @@
+site_name: Espilon Documentation
+site_description: ESP32 Embedded Agent Framework for Security Research
+site_author: Espilon Project Contributors
+site_url: https://espilon-project.io
+
+repo_name: Espilon-Net/espilon-docs
+repo_url: https://github.com/Espilon-Net/espilon-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/radio-tower
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Espilon-Net/espilon-docs
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contact@espilon-project.io
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang:
+        - en
+        - fr
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - Quick Start: getting-started/quickstart.md
+    - Installation: getting-started/installation.md
+
+  - Hardware:
+    - Overview: hardware/index.md
+    - Supported Boards: hardware/boards.md
+    - LilyGO T-Call: hardware/lilygo-tcall.md
+
+  - Configuration:
+    - Menuconfig Guide: configuration/menuconfig.md
+    - Network Settings: configuration/network.md
+
+  - Tools:
+    - Flasher: tools/flasher.md
+    - C2 Server: tools/c2-server.md
+
+  - Modules:
+    - Overview: modules/index.md
+    - Command Reference: modules/commands.md
+
+  - Security:
+    - Overview: security/index.md
+    - Best Practices: security/best-practices.md
+
+  - About:
+    - License: about/license.md
+
+copyright: Copyright &copy; 2025 Espilon Project Contributors

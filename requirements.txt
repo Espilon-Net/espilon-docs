@@ -1,0 +1,18 @@
+# MkDocs Dependencies for Epsilon Documentation
+
+# Core MkDocs
+mkdocs>=1.5.0
+mkdocs-material>=9.5.0
+
+# Plugins
+mkdocs-git-revision-date-localized-plugin>=1.2.0
+mkdocs-minify-plugin>=0.7.0
+mkdocs-redirects>=1.2.0
+
+# Extensions
+pymdown-extensions>=10.7.0
+markdown>=3.5.0
+
+# Optional but recommended
+mkdocs-awesome-pages-plugin>=2.9.0
+mkdocs-macros-plugin>=1.0.0

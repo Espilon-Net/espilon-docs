@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  docs:
+    build: .
+    container_name: espilon-docs
+    restart: always
+    expose:
+      - "80"
+    networks:
+      - default
+    labels:
+      - "docs.espilon.net"
+
+networks:
+  default:
+    external: true
+    name: espilon_default
