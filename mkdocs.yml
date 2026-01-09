@@ -56,6 +56,14 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:contact@espilon-project.io
 
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Français
+      link: /fr/
+      lang: fr
+
 extra_css:
   - stylesheets/extra.css
 
@@ -102,6 +110,42 @@ plugins:
       lang:
         - en
         - fr
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations:
+            Home: Accueil
+            Getting Started: Démarrage
+            Overview: Aperçu
+            Architecture: Architecture
+            Quick Start: Démarrage Rapide
+            Installation: Installation
+            Hardware: Matériel
+            Supported Boards: Cartes Supportées
+            Configuration: Configuration
+            Menuconfig Guide: Guide Menuconfig
+            Network Settings: Paramètres Réseau
+            Tools: Outils
+            Flasher: Flasher
+            C2 Server: Serveur C2
+            Modules: Modules
+            Command Reference: Référence des Commandes
+            Use Cases: Cas d'Usage
+            Examples & Scenarios: Exemples & Scénarios
+            Security: Sécurité
+            Best Practices: Bonnes Pratiques
+            About: À Propos
+            License: Licence
 
 nav:
   - Home: index.md
