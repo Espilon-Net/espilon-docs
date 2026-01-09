@@ -5,14 +5,7 @@ services:
     build: .
     container_name: espilon-docs
     restart: always
-    expose:
-      - "80"
-    networks:
-      - default
+    ports:
+      - "8080:80"
     labels:
       - "docs.espilon.net"
-
-networks:
-  default:
-    external: true
-    name: espilon_default

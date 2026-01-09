@@ -1,8 +1,15 @@
+<div class="hero" markdown>
+
 # Espilon
 
-**ESP32 Embedded Agent Framework for Security Research**
+<p class="hero-subtitle">ESP32 Embedded Agent Framework for Security Research</p>
 
-Espilon is an open-source embedded agent framework for ESP32 microcontrollers, designed for network surveillance, reconnaissance, and distributed communication in constrained IoT environments.
+Build powerful, lightweight embedded agents for network surveillance, reconnaissance, and distributed IoT communication. Open-source, modular, and designed for security professionals.
+
+[Get Started :material-rocket-launch:](getting-started/quickstart.md){ .md-button .md-button--primary }
+[View Architecture :material-graph:](getting-started/architecture.md){ .md-button }
+
+</div>
 
 ---
 
