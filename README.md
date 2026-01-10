@@ -2,18 +2,18 @@
 
 Official documentation for Espilon - ESP32 Embedded Agent Framework for Security Research.
 
-## 📚 About
+## About
 
 This repository contains the complete documentation for Espilon, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
 **Live Documentation**: [https://docs.espilon.net](https://docs.espilon.net)
 
-## 🌍 Languages
+## Languages
 
-- 🇬🇧 English (default)
-- 🇫🇷 Français
+- English (default)
+- Français
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -43,7 +43,7 @@ This repository contains the complete documentation for Espilon, built with [MkD
    http://localhost:8000
    ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Build the image
 
@@ -59,7 +59,7 @@ docker run -d -p 8080:80 --name espilon-docs espilon-docs
 
 Access at `http://localhost:8080`
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 espilon-docs/
@@ -79,7 +79,7 @@ espilon-docs/
 └── Dockerfile         # Multi-stage Docker build
 ```
 
-## 🔧 Build Static Site
+## Build Static Site
 
 Generate static HTML files:
 
@@ -89,21 +89,21 @@ mkdocs build
 
 Output will be in `site/` directory.
 
-## 🌐 Adding Translations
+## Adding Translations
 
 1. Create language directory: `docs/[lang]/`
 2. Translate markdown files maintaining same structure
 3. Update `mkdocs.yml` with new language configuration
 4. See `docs/fr/README.md` for translation guidelines
 
-## 📝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
 
-## 📖 Documentation Topics
+## Documentation Topics
 
 - Getting Started & Installation
 - Hardware Configuration (ESP32, LilyGO T-Call, ESP32-CAM)
@@ -112,7 +112,7 @@ Output will be in `site/` directory.
 - Use Cases & Examples
 - Architecture & Design
 
-## ⚙️ Technology Stack
+## Technology Stack
 
 - [MkDocs](https://www.mkdocs.org/) - Documentation generator
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) - Theme
@@ -121,20 +121,20 @@ Output will be in `site/` directory.
 - Docker - Containerization
 - Nginx - Web server
 
-## 📄 License
+## License
 
 MIT License - See main [Espilon repository](https://github.com/Espilon-Net/espilon) for details.
 
-## 🔗 Related Projects
+## Related Projects
 
 - [Espilon Framework](https://github.com/Espilon-Net/espilon) - Main project repository
 - [Espilon C2 Server](https://github.com/Espilon-Net/espilon) - Command & Control server
 
-## 📧 Support
+## Support
 
 - **Issues**: [GitHub Issues](https://github.com/Espilon-Net/espilon-docs/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Espilon-Net/espilon/discussions)
 
 ---
 
-Built with ❤️ for the security research community
+Built for the security research community
