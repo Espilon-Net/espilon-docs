@@ -1,32 +1,22 @@
-# Multi-stage build for MkDocs documentation
-
-# Stage 1: Build documentation
+# Stage 1: Build MkDocs
 FROM python:3.11-slim AS builder
-
 WORKDIR /docs
 
-# Copy requirements and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy documentation source
 COPY . .
+RUN mkdocs build --clean
 
-# Build static documentation
-RUN mkdocs build
-
-# Stage 2: Serve with Nginx
+# Stage 2: Serve with nginx on 8008
 FROM nginx:alpine
 
-# Copy built documentation from builder stage
 COPY --from=builder /docs/site /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy custom nginx configuration if needed
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 8008
 
-# Expose port 80
-EXPOSE 80
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:8008/ || exit 1
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s \
-  CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
+CMD ["nginx", "-g", "daemon off;"]

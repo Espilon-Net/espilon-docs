@@ -70,19 +70,19 @@ Enable only the features you need:
 
 ```mermaid
 graph TB
-    subgraph "ESP32 Agent"
+    subgraph ESP32Agent[ESP32 Agent]
         FW[Firmware]
         MOD[Modules]
         NET[Network Stack]
         CRYPTO[Encryption]
     end
 
-    subgraph "Network"
+    subgraph Network[Network]
         WIFI[WiFi AP]
         CELL[Cellular Tower]
     end
 
-    subgraph "C2 Server"
+    subgraph C2Server[C2 Server]
         C2[C3PO Server]
         CLI[Interactive CLI]
         DB[Device Registry]

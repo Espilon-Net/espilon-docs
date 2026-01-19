@@ -100,14 +100,14 @@ Espilon démontre comment construire des agents embarqués légers et efficaces 
 
 ```mermaid
 graph TB
-    subgraph ESP32["Agent ESP32"]
+    subgraph ESP32[Agent ESP32]
         M[Modules]
         C[Registre de Commandes]
         CR[Couche Centrale]
         E[ESP-IDF]
     end
 
-    subgraph C2["Serveur C2 (Python)"]
+    subgraph C2Server[Serveur C2]
         CLI[Interface CLI]
         DR[Registre des Appareils]
         GM[Gestionnaire de Groupes]
@@ -117,12 +117,12 @@ graph TB
     C --> CR
     CR --> E
 
-    E <-->|TCP Chiffré| C2
+    E <-->|TCP Chiffre| C2Server
     CLI --> DR
     DR --> GM
 
     style ESP32 fill:#7c3aed
-    style C2 fill:#059669
+    style C2Server fill:#059669
 ```
 
 ## Matériel Supporté

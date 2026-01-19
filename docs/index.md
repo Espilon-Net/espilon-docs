@@ -1,6 +1,6 @@
 <div class="hero" markdown>
 
-# Espilon
+# ε - Espilon
 
 <p class="hero-subtitle">ESP32 Embedded Agent Framework for Security Research</p>
 
@@ -100,14 +100,14 @@ Espilon demonstrates how to build lightweight, efficient embedded agents capable
 
 ```mermaid
 graph TB
-    subgraph ESP32["ESP32 Agent"]
+    subgraph ESP32[ESP32 Agent]
         M[Modules]
         C[Command Registry]
         CR[Core Layer]
         E[ESP-IDF]
     end
 
-    subgraph C2["C2 Server (Python)"]
+    subgraph C2Server[C2 Server]
         CLI[CLI Interface]
         DR[Device Registry]
         GM[Group Manager]
@@ -117,12 +117,12 @@ graph TB
     C --> CR
     CR --> E
 
-    E <-->|TCP Encrypted| C2
+    E <-->|TCP Encrypted| C2Server
     CLI --> DR
     DR --> GM
 
     style ESP32 fill:#1e40af
-    style C2 fill:#059669
+    style C2Server fill:#059669
 ```
 
 ## Supported Hardware

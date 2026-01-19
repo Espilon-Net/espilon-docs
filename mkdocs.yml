@@ -3,8 +3,8 @@ site_description: ESP32 Embedded Agent Framework for Security Research
 site_author: Espilon Project Contributors
 site_url: https://espilon-project.io
 
-repo_name: Espilon-Net/espilon-docs
-repo_url: https://github.com/Espilon-Net/espilon-docs
+repo_name: Espilon-Net/espilon-source
+repo_url: https://github.com/Espilon-Net/espilon-source
 edit_uri: edit/main/docs/
 
 theme:
@@ -144,8 +144,12 @@ plugins:
             Examples & Scenarios: Exemples & Scénarios
             Security: Sécurité
             Best Practices: Bonnes Pratiques
+            Reference: Référence
+            Troubleshooting: Dépannage
+            FAQ: FAQ
             About: À Propos
             License: Licence
+            ESP32-CAM: ESP32-CAM
 
 nav:
   - Home: index.md
@@ -160,6 +164,7 @@ nav:
     - Overview: hardware/index.md
     - Supported Boards: hardware/boards.md
     - LilyGO T-Call: hardware/lilygo-tcall.md
+    - ESP32-CAM: hardware/esp32-cam.md
 
   - Configuration:
     - Menuconfig Guide: configuration/menuconfig.md
@@ -179,6 +184,10 @@ nav:
   - Security:
     - Overview: security/index.md
     - Best Practices: security/best-practices.md
+
+  - Reference:
+    - Troubleshooting: reference/troubleshooting.md
+    - FAQ: reference/faq.md
 
   - About:
     - License: about/license.md

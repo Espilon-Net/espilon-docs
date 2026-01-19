@@ -11,7 +11,7 @@ This repository contains the complete documentation for Espilon, built with [MkD
 ## Languages
 
 - English (default)
-- Français
+- Francais
 
 ## Quick Start
 
@@ -22,79 +22,87 @@ This repository contains the complete documentation for Espilon, built with [MkD
 
 ### Local Development
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Espilon-Net/espilon-docs.git
-   cd espilon-docs
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/Espilon-Net/espilon-docs.git
+cd espilon-docs
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-3. **Run local server**
-   ```bash
-   mkdocs serve
-   ```
+# Run local server
+mkdocs serve
 
-4. **Open in browser**
-   ```
-   http://localhost:8000
-   ```
+# Open http://localhost:8000
+```
 
 ## Docker Deployment
 
-### Build the image
-
 ```bash
+# Build
 docker build -t espilon-docs .
+
+# Run
+docker run -d -p 8008:8008 --name espilon-docs espilon-docs
+
+# Access at http://localhost:8008
 ```
-
-### Run the container
-
-```bash
-docker run -d -p 8080:80 --name espilon-docs espilon-docs
-```
-
-Access at `http://localhost:8080`
 
 ## Repository Structure
 
 ```
 espilon-docs/
-├── docs/               # Documentation source files
-│   ├── index.md       # English homepage
-│   ├── fr/            # French translations
-│   ├── getting-started/
-│   ├── hardware/
-│   ├── modules/
-│   ├── security/
-│   └── stylesheets/
-├── assets/            # Images and diagrams
-│   ├── images/
-│   └── diagrams/
-├── mkdocs.yml         # MkDocs configuration
-├── requirements.txt   # Python dependencies
-└── Dockerfile         # Multi-stage Docker build
+├── docs/
+│   ├── index.md              # Homepage
+│   ├── fr/                   # French translations
+│   ├── getting-started/      # Quick start, installation, architecture
+│   ├── hardware/             # ESP32, LilyGO T-Call, ESP32-CAM guides
+│   ├── configuration/        # Menuconfig, network settings
+│   ├── tools/                # C2 Server, Flasher
+│   ├── modules/              # Command reference
+│   ├── use-cases/            # Examples & scenarios
+│   ├── security/             # Best practices
+│   ├── reference/            # Troubleshooting, FAQ
+│   └── stylesheets/          # Custom CSS
+├── assets/                   # Images and diagrams
+├── mkdocs.yml               # MkDocs configuration
+├── requirements.txt         # Python dependencies
+├── Dockerfile               # Multi-stage Docker build
+└── nginx.conf               # Nginx configuration
 ```
+
+## Documentation Contents
+
+### Getting Started
+- Overview of Espilon framework
+- System architecture
+- Quick start guide
+- Installation instructions
+
+### Hardware
+- Supported boards comparison
+- LilyGO T-Call (GPRS) setup
+- ESP32-CAM (Camera) setup
+- Pinouts and wiring diagrams
+
+### Tools
+- C2 Server (C3PO) complete guide
+- Flasher utility
+
+### Modules
+- Command reference (600+ lines)
+- Module API documentation
+
+### Reference
+- Troubleshooting guide
+- FAQ
 
 ## Build Static Site
 
-Generate static HTML files:
-
 ```bash
 mkdocs build
+# Output in site/ directory
 ```
-
-Output will be in `site/` directory.
-
-## Adding Translations
-
-1. Create language directory: `docs/[lang]/`
-2. Translate markdown files maintaining same structure
-3. Update `mkdocs.yml` with new language configuration
-4. See `docs/fr/README.md` for translation guidelines
 
 ## Contributing
 
@@ -103,37 +111,23 @@ Output will be in `site/` directory.
 3. Make your changes
 4. Submit a pull request
 
-## Documentation Topics
-
-- Getting Started & Installation
-- Hardware Configuration (ESP32, LilyGO T-Call, ESP32-CAM)
-- Module Reference & Commands
-- Security Research & Best Practices
-- Use Cases & Examples
-- Architecture & Design
-
 ## Technology Stack
 
 - [MkDocs](https://www.mkdocs.org/) - Documentation generator
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) - Theme
-- [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) - Multilingual support
+- [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) - Multilingual
 - [Mermaid](https://mermaid.js.org/) - Diagrams
-- Docker - Containerization
-- Nginx - Web server
+- Docker + Nginx - Deployment
 
 ## License
 
-MIT License - See main [Espilon repository](https://github.com/Espilon-Net/espilon) for details.
+MIT License - See [Espilon repository](https://github.com/Espilon-Net/espilon) for details.
 
-## Related Projects
+## Related
 
-- [Espilon Framework](https://github.com/Espilon-Net/espilon) - Main project repository
-- [Espilon C2 Server](https://github.com/Espilon-Net/espilon) - Command & Control server
-
-## Support
-
-- **Issues**: [GitHub Issues](https://github.com/Espilon-Net/espilon-docs/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Espilon-Net/espilon/discussions)
+- [Espilon Framework](https://github.com/Espilon-Net/espilon) - Main project
+- [GitHub Issues](https://github.com/Espilon-Net/espilon-docs/issues) - Bug reports
+- [GitHub Discussions](https://github.com/Espilon-Net/espilon/discussions) - Q&A
 
 ---
 
